@@ -1,0 +1,26 @@
+.profile {
+    flex-grow: 2;
+
+    form {
+        margin-bottom: 30px;
+    }
+
+    * {
+        display: block;
+    }
+
+    input {
+        margin: 5px 0 10px;
+    }
+
+    button {
+        font: inherit;
+        color: #fff;
+        background-color: #222;
+        font-size: 12px;
+        padding: 2px 5px;
+        border: 1px solid #222;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+}

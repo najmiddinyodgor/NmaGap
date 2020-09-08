@@ -1,0 +1,9 @@
+.messages {
+    flex-grow: 2;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+
+    margin-bottom: 5px;
+    overflow-y: scroll;
+}

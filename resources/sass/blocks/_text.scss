@@ -1,0 +1,29 @@
+.header-text {
+    font-size: 25px;
+    line-height: 25px;
+    font-weight: 500;
+    margin-right: auto;
+}
+
+.primary-text {
+    font-weight: 500;
+}
+
+.secondary-text,
+.succes-text {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 16px;
+    color: #999;
+}
+
+.succes-text {
+    color: forestgreen;
+}
+
+.error-text {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 16px;
+    color: red;
+}

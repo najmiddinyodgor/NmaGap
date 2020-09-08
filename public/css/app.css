@@ -1,0 +1,459 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+  min-width: 320px;
+  color: #222222;
+  font-size: 17px;
+  line-height: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.container {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1000px;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header,
+.footer {
+  position: relative;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 15px 20px;
+  height: calc(100vh - 100px);
+}
+
+.modal-btn {
+  display: block;
+  position: absolute;
+  left: 75%;
+  top: 25px;
+  z-index: 50;
+  cursor: pointer;
+  font-size: 15px;
+  padding: 5px 10px;
+  border-radius: 25px;
+  background-color: #eee;
+}
+
+.footer {
+  padding: 15px;
+  justify-content: center;
+  color: #fff;
+  background-color: #222;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+button {
+  font: inherit;
+  border: none;
+  background-color: transparent;
+}
+
+.messages {
+  flex-grow: 2;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  margin-bottom: 5px;
+  overflow-y: scroll;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25px;
+  width: 25px;
+  cursor: pointer;
+  outline: none;
+}
+
+.btn svg {
+  width: 100%;
+  height: 100%;
+}
+
+.btn-right {
+  margin-right: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form h1 {
+  font-size: 40px;
+  line-height: 40px;
+  margin: 150px 0 70px;
+  text-align: center;
+}
+
+.form div {
+  display: inline-block;
+  padding: 20px 20px 0;
+  margin: 0 auto;
+  margin-bottom: 25px;
+  border-radius: 15px;
+  border-bottom-left-radius: 0;
+  border: 2px solid #03abf4;
+}
+
+.form p {
+  width: 300px;
+  min-width: 250px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.form label {
+  font-size: 18px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.form input {
+  border: 1.5px solid #03abf4;
+  padding: 5px 15px;
+  font: inherit;
+  width: 100%;
+  border-radius: 15px;
+}
+
+.form .inline {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.form .inline label {
+  margin: 0 8px 0;
+}
+
+.form .inline input {
+  width: auto;
+}
+
+.form button {
+  display: inline-block;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 15px;
+  border: none;
+  font: inherit;
+  color: #fff;
+  background-color: #03abf4;
+}
+
+.form a {
+  color: #03abf4;
+}
+
+.form label,
+.form b {
+  text-align: left;
+  font-weight: 500;
+}
+
+@media (min-width: 768px) {
+  .form form {
+    display: flex;
+    flex-wrap: wrap;
+    width: 600px;
+    justify-content: center;
+  }
+
+  .form p {
+    width: 48%;
+    text-align: center;
+  }
+}
+
+.msg {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 5px 0;
+  width: 100%;
+}
+
+.msg .msg-wrap {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 5px;
+}
+
+.msg .msg-text {
+  padding: 5px 15px;
+  word-break: break-all;
+  text-align: left;
+  border-radius: 15px;
+  border: 1.5px solid #222;
+}
+
+.msg h3 {
+  margin: 0 10px;
+}
+
+.msg a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.msg-out {
+  align-items: flex-end;
+}
+
+.msg-out .msg-photo {
+  margin: 0;
+  margin-left: 10px;
+}
+
+.msg-out .msg-wrap {
+  flex-direction: row-reverse;
+}
+
+.msg-out .msg-text {
+  border-bottom-right-radius: 0;
+}
+
+.msg-in .msg-photo {
+  margin: 0;
+  margin-right: 10px;
+}
+
+.msg-in .msg-text {
+  background-color: #222;
+  color: #fff;
+  border-bottom-left-radius: 0;
+}
+
+.popup {
+  display: none;
+}
+
+.popup-show {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+}
+
+.popup-wrap {
+  position: relative;
+  background-color: #fff;
+  padding: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.popup-close {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 20px;
+  height: 20px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.popup-close::after,
+.popup-close::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 20px;
+  height: 2px;
+  background-color: #222;
+  transform: rotate(45deg);
+}
+
+.popup-close::after {
+  transform: rotate(-45deg);
+}
+
+.popup-wrap {
+  min-width: 300px;
+  width: 400px;
+  height: 70vh;
+}
+
+.popup-wrap > div {
+  overflow-y: scroll;
+}
+
+.users .user-info,
+.search .user-info {
+  padding: 10px 0;
+}
+
+.search {
+  text-align: center;
+}
+
+.search textarea {
+  font: inherit;
+  height: 30px;
+  width: 100%;
+  border: 1px solid black;
+  padding: 5px;
+  resize: none;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.header-text {
+  font-size: 25px;
+  line-height: 25px;
+  font-weight: 500;
+  margin-right: auto;
+}
+
+.primary-text {
+  font-weight: 500;
+}
+
+.secondary-text,
+.succes-text {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #999;
+}
+
+.succes-text {
+  color: forestgreen;
+}
+
+.error-text {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 16px;
+  color: red;
+}
+
+.write div {
+  display: flex;
+  align-items: center;
+  padding: 5px 15px;
+  border: 1.5px solid #222;
+  border-radius: 15px;
+}
+
+.write button {
+  width: 20px;
+  height: 20px;
+  margin-left: 20px;
+}
+
+.write textarea {
+  height: 20px;
+  width: 100%;
+  border: none;
+  font: inherit;
+  resize: none;
+  outline: none;
+  overflow: hidden;
+}
+
+.dialog-header {
+  display: flex;
+  flex-grow: 2;
+  align-items: center;
+}
+
+.dialog-header .btn {
+  margin: 0 20px;
+}
+
+.user-info {
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+
+.user-info .avatar {
+  margin-right: 10px;
+}
+
+.user-info dt {
+  padding-bottom: 2px;
+}
+
+.user-info a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.profile {
+  flex-grow: 2;
+}
+
+.profile form {
+  margin-bottom: 30px;
+}
+
+.profile * {
+  display: block;
+}
+
+.profile input {
+  margin: 5px 0 10px;
+}
+
+.profile button {
+  font: inherit;
+  color: #fff;
+  background-color: #222;
+  font-size: 12px;
+  padding: 2px 5px;
+  border: 1px solid #222;
+  border-radius: 10px;
+  cursor: pointer;
+}
+

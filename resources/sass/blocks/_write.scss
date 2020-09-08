@@ -1,0 +1,29 @@
+.write {
+
+    div {
+        display: flex;
+        align-items: center;
+
+        padding: 5px 15px;
+        border: 1.5px solid #222;
+        border-radius: 15px;
+    }
+
+
+    button {
+        width: 20px;
+        height: 20px;
+        margin-left: 20px;
+    }
+
+    textarea {
+        height: 20px;
+        width: 100%;
+
+        border: none;
+        font: inherit;
+        resize: none;
+        outline: none;
+        overflow: hidden;
+    }
+}
